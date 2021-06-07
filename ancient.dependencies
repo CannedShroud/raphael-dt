@@ -1,8 +1,0 @@
-[
-   {
-   "remote"       : "github",
-   "repository"   : "wadiehabib/vendor_xiaomi_raphael",
-   "target_path"  : "vendor/xiaomi",
-   "branch"       : "11"
-   }
-]

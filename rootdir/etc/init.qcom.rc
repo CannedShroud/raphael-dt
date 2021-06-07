@@ -1,3 +1,14 @@
+on early-init
+    start start_dmesg
+
+on init
+    start start_dmesg
+
+
+on fs
+    start start_dmesg
+
+
 on boot
 # Allow system to read measured screen FPS
     chown system graphics /sys/class/drm/card0/sde-crtc-0/measured_fps
@@ -10,6 +21,7 @@ on boot
     chmod 0666 /sys/class/power_supply/battery/charging_enabled
 
 on post-fs-data
+    start start_dmesg
     mount none /vendor/etc/audio/audio_policy_configuration.xml /vendor/etc/audio_policy_configuration.xml bind
     write /sys/class/drm/card0-DSI-1/dim_layer_enable 1
 
@@ -40,3 +52,11 @@ on property:sys.boot_completed=1
     # Restrict permissions to socket file
     # to hide Magisk & co.
     chmod 440 /proc/net/unix
+
+service start_dmesg /system/bin/sh /system/bin/start_dmesg
+    class core
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:ueventd:s0

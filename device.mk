@@ -9,6 +9,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
+# You should not be here
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/start_dmesg:$(TARGET_COPY_OUT_SYSTEM)/bin/start_dmesg
+    
 #Set dalvik heap
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 

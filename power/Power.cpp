@@ -32,6 +32,7 @@
 #include <android/log.h>
 #include <linux/input.h>
 #include <utils/Log.h>
+#include <fcntl.h>
 #include "Power.h"
 #include "power-common.h"
 

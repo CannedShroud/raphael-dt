@@ -1,3 +1,5 @@
 attribute hal_perf;
 attribute hal_perf_client;
 attribute hal_perf_server;
+attribute hal_lineage_fod_server;
+attribute hal_lineage_fod;

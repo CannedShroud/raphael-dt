@@ -70,12 +70,42 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libvulkan
 
-# FOD
 PRODUCT_PACKAGES += \
-    lineage.biometrics.fingerprint.inscreen@1.0-service.raphael
+    android.hardware.gnss@2.1 \
+    android.hardware.gnss@2.1.vendor \
+    android.hardware.gnss.measurement_corrections@1.1 \
+    android.hardware.gnss.measurement_corrections@1.1.vendor \
+    android.hardware.gnss.visibility_control@1.0 \
+    android.hardware.gnss.visibility_control@1.0.vendor
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/vendor.lineage.biometrics.fingerprint.inscreen.xml:system/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0 \
+    android.hardware.gatekeeper@1.0.vendor \
+    android.hardware.keymaster@4.1 \
+    android.hardware.keymaster@4.1.vendor
+
+# Netd
+PRODUCT_PACKAGES += \
+    android.system.net.netd@1.1.vendor
+
+# Neural Networks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.2 \
+    android.hardware.neuralnetworks@1.2.vendor
+
+#Secure element
+PRODUCT_PACKAGES += \
+    android.hardware.secure_element@1.2 \
+    android.hardware.secure_element@1.2.vendor
+
+# Radio
+PRODUCT_PACKAGES += \
+    android.hardware.radio.deprecated@1.0 \
+    android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.radio@1.5 \
+    android.hardware.radio@1.5.vendor \
+    android.hardware.radio.config@1.2 \
+    android.hardware.radio.config@1.2.vendor
 
 # FM
 PRODUCT_PACKAGES += \
